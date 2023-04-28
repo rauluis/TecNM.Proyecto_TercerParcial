@@ -1,0 +1,12 @@
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\bin\MCD\Debug\net6.0\TecNM.Proyecto.Core.deps.json
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\bin\MCD\Debug\net6.0\TecNM.Proyecto.Core.dll
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\bin\MCD\Debug\net6.0\TecNM.Proyecto.Core.pdb
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.csproj.AssemblyReference.cache
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.AssemblyInfoInputs.cache
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.AssemblyInfo.cs
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.csproj.CoreCompileInputs.cache
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.dll
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\refint\TecNM.Proyecto.Core.dll
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\TecNM.Proyecto.Core.pdb
+C:\Users\Rizo\Documents\web\TecNM.Proyecto\TecNM.Proyecto.Core\obj\MCD\Debug\net6.0\ref\TecNM.Proyecto.Core.dll
