@@ -22,8 +22,6 @@ builder.Services.AddSwaggerGen();
 
 //builder.Services.AddScoped<IProductCategoryRepository, InMemoryProductCategoryRepository>();
 //builder.Services.AddSingleton<IProductCategoryRepository, ProductCategoryRepository>();
-builder.Services.AddScoped<IBrandService,BrandService>();
-builder.Services.AddScoped<IBrandRepository,BrandRepository>();
 
 builder.Services.AddScoped<IProductCategoryRepository,ProductCategoryRepository>();
 builder.Services.AddScoped<IProductCategoryService,ProductCategoryService>();

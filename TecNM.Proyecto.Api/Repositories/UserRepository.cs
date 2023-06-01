@@ -52,4 +52,13 @@ public class UserRepository : IUserRepository
         }
         return User.IsDeleted == true ? null: User;
     }
+
+    public async Task<User> GetByUserName(string username)
+    {
+        const string sql = "SELECT * FROM User WHERE Username = @Username";
+
+        var user = await _dbContext.Connection.QueryFirstOrDefaultAsync<User>(sql, new { Username = username });
+
+        return user;
+    }
 }

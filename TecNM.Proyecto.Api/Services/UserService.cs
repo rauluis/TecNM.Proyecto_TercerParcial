@@ -42,9 +42,7 @@ public class UserService : IUserService
         User.Name = UserDto.Name;
         User.Phone = UserDto.Phone;
         User.Username = UserDto.Username;
-        User.Password = UserDto.Password;
         User.Address = UserDto.Address;
-
         User.UpdatedBy = "";
         User.UpdateDate = DateTime.Now;
         await _UserRepository.UpdateAsync(User);
@@ -66,6 +64,12 @@ public class UserService : IUserService
         return (User != null);
     }
 
+    public  async Task<bool> UserNameExist(string username)
+    {
+        var user = await _UserRepository.GetByUserName(username);
+        return (user != null);
+    }
+
     public async Task<UserDto> GetById(int id)
     {
         var User = await _UserRepository.GetById(id);
@@ -75,7 +79,18 @@ public class UserService : IUserService
         return UserDto;
     }
 
-      public async Task<bool> DeleteAsync(int id)
+    public async Task<UserDto> GetByUserName(string username)
+    {
+        var User = await _UserRepository.GetByUserName(username);
+        if (User == null)
+            throw new Exception("User Not Found");
+    
+        var UserDto = new UserDto(User);
+        return UserDto;
+
+    }
+
+    public async Task<bool> DeleteAsync(int id)
     {
          return await _UserRepository.DeleteAsync(id);
         

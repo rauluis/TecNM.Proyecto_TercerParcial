@@ -46,6 +46,23 @@ public class UserController : ControllerBase
         response.Data = await _UserService.GetById(id);
         return Ok(response);
     }
+    [HttpGet]
+    [Route("{username}")]
+    public async Task<ActionResult<Response<UserDto>>> GetByUserName(string username){
+        var response = new Response<UserDto>();
+    
+        if (await _UserService.UserNameExist(username))
+        {
+            response.Data = await _UserService.GetByUserName(username);
+            return Ok(response);
+        }
+        else
+        {
+            response.Errors.Add("User Not Found");
+            return NotFound(response);
+        }
+    }
+    
     //Actualizar
     [HttpPut]
     public async Task<ActionResult<Response<UserDto>>> Update([FromBody] UserDto UserDto){

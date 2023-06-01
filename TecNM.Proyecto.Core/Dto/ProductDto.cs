@@ -4,22 +4,20 @@ namespace TecNM.Proyecto.Core.Dto;
 
 public class ProductDto : DtoBase
 {
-    [RegularExpression("^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$", 
+    [RegularExpression("^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]+$", 
     ErrorMessage = "El campo Name SOLO debe contener caracteres alfabeticos.")]
     [StringLength(45, MinimumLength =1, ErrorMessage = "El campo Name debe tener minimo 1 caracter y maximo 45.")]
-    public string? Name { get; set; }
+    public string Name { get; set; }
     [RegularExpression("^(?=[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ0-9])[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ0-9 ]+$",
      ErrorMessage = "El campo Descripcion SOLO debe contener caracteres alfabéticos, números y espacios (pero no al inicio).")]
     [StringLength(45, MinimumLength = 1, ErrorMessage = "El campo Descriocion debe tener minimi 1 caracter y maximo 45.")]
-    public string? Description { get; set; }
+    public string Description { get; set; }
     
     [RegularExpression(@"^\d{1,4}([.,]\d{1,2})?$", 
     ErrorMessage = "El precio debe ser un número válido con un máximo de 4 dígitos antes del punto decimal y 2 dígitos después.")]
     public double Price { get; set; }
-    [RegularExpression(@"\b(https?://\S+?\.\S+?(\.jpg|\.jpeg|\.png|\.gif))\b",
-     ErrorMessage = "La imagen debe ser una URL válida de imagen")]
-    [StringLength(300, ErrorMessage = "La URL de la imagen no puede tener más de 300 caracteres.")]
-    public string? Image { get; set; }
+    [StringLength(500, ErrorMessage = "La URL de la imagen no puede tener más de 300 caracteres.")]
+    public string Image { get; set; }
     [RegularExpression("^[0-9]{1,4}$", ErrorMessage = "El campo stock solo debe contener caracteres numéricos y 4 caracteres.")]
      public int Stock { get; set; }
      [RegularExpression("^[1-9][0-9]{0,44}$", 

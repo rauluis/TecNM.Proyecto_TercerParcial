@@ -14,10 +14,13 @@ public interface IUserService
 
     //Metodo para retornar el id de las usuarios que borrara
     Task<bool> UserExist(int id);
+    Task<bool> UserNameExist(string username);
 
     //Metodo para obtener uan usuario por id
     Task<UserDto> GetById(int id);
-
+    
+    Task<UserDto> GetByUserName(string username);
+    
     Task<bool> DeleteAsync(int id);
 
     

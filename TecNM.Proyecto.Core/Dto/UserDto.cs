@@ -11,12 +11,12 @@ public string? Name { get; set; }
 
 [RegularExpression("^[a-zA-Z0-9]+$", ErrorMessage = "El campo 'UserName' SOLO debe contener caracteres alfanumericos, sin espacios, ni acentos.")]
 [StringLength(20, MinimumLength =1, ErrorMessage = "El campo 'UserName' debe tener minimo 1 caracter y maximo 20")]
-public string? Username { get; set; }
+public string Username { get; set; }
 
 [StringLength(45, MinimumLength = 8, ErrorMessage = "La longitud de la contraseña debe estar entre 8 y 45 caracteres")]
 [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,45}$",
  ErrorMessage = "La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial")]
-public string? Password { get; set; }
+public string Password { get; set; }
 
 [RegularExpression(@"^[0-9]*$", ErrorMessage = "El campo 'Phone' solo debe contener números")]
 [StringLength(10, MinimumLength = 10, ErrorMessage = "El número de teléfono debe tener 10 dígitos")]

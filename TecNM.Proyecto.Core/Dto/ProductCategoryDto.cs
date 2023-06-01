@@ -7,7 +7,7 @@ public class ProductCategoryDto : DtoBase{
 
 [RegularExpression("^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+$", ErrorMessage = "El campo Name SOLO debe contener caracteres alfabeticos.")]
 [StringLength(45, MinimumLength =1, ErrorMessage = "El campo Name debe tener minimo 1 caracter y maximo 45.")]
-public string? Name { get; set; }
+public string Name { get; set; }
 
 
 public ProductCategoryDto(){
