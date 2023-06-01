@@ -1,0 +1,75 @@
+﻿@page "{id:int}"
+@model TecNM.Proyecto.WebSite.Pages.Product.Delete
+
+<div class="container" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Borrar Producto</h2>
+                
+            <form method="post">
+                <input type="hidden" asp-for="Product.Id"/>
+                <div class="form-group">
+                    <label asp-for="Product.Name"></label>
+                    <input asp-for="Product.Name" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="Product.Name"></span>
+                </div>
+                    
+                <div class="form-group">
+                    <label asp-for="Product.Description"></label>
+                    <input asp-for="Product.Description" class="form-control" maxlength="100"/>
+                    <span class="text-danger" asp-validation-for="Product.Description"></span>
+                </div>
+                <div class="col-md-1"></div>
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>Ocurrio un error</li>
+                            }
+                        </ul>
+                    </div>    
+                }  
+                <div class="col-md-12">
+                    <div class="mb-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-danger mr-3">Borrar</button>
+                        <a class="btn btn-secondary" asp-page="/Product/List">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>

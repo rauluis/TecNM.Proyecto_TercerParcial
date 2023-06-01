@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Cafeteria</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+#menu-list,
+#cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-list li,
+#cart-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#cart-list li span {
+    margin-left: 10px;
+}
+
+#cart-total {
+    margin-top: 10px;
+}
+
+#purchase-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>School Cafeteria</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="menu">
+        <h2>Menu</h2>
+        <ul id="menu-list">
+            <!-- Menu items will be dynamically generated using JavaScript -->
+        </ul>
+    </section>
+    <section id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-list">
+            <!-- Cart items will be dynamically generated using JavaScript -->
+        </ul>
+        <div id="cart-total">
+            <p>Total: <span id="total-price">0.00</span></p>
+        </div>
+        <button id="purchase-btn">Purchase</button>
+    </section>
+    <script >
+
+// Menu items data
+const menuItems = [
+    { name: 'Lunch 1', price: 5.99, image: 'img/fruta.jpg' },
+    { name: 'Lunch 2', price: 6.99, image: 'img/fruta.jpg' },
+    { name: 'Healthy Food', price: 3.99, image: 'img/fruta.jpg' },
+    { name: 'Beverage', price: 1.99, image: 'img/fruta.jpg' },
+    { name: 'Dessert', price: 2.99, image: 'img/fruta.jpg' }
+];
+
+// Cart items data
+const cartItems = [];
+
+// Get menu and cart list elements
+const menuList = document.getElementById('menu-list');
+const cartList = document.getElementById('cart-list');
+
+// Dynamically generate menu items
+menuItems.forEach(item => {
+    const li = document.createElement('li');
+
+    // Crear imagen
+    const img = document.createElement('img');
+    img.src = item.image; // Establecer la ruta o URL de la imagen
+    img.alt = `${item.name} Image`; // Establecer el texto alternativo de la imagen
+    li.appendChild(img); // Agregar la imagen al elemento <li>
+
+    // Crear nombre y precio
+    const namePrice = document.createElement('div');
+    namePrice.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+    li.appendChild(namePrice);
+
+    // Crear botón
+    const btn = document.createElement('button');
+    btn.textContent = 'Add to Cart';
+    btn.addEventListener('click', () => {
+        addToCart(item);
+    });
+    li.appendChild(btn);
+
+    menuList.appendChild(li);
+});
+
+// Add item to cart
+function addToCart(item) {
+    // Check if item already exists in cart
+    const existingItem = cartItems.find(cartItem => cartItem.name === item.name);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cartItems.push({ ...item, quantity: 1 });
+    }
+
+    // Update cart UI
+    updateCartUI();
+}
+
+// Update cart UI
+function updateCartUI() {
+    cartList.innerHTML = '';
+    let total = 0;
+
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)} x ${item.quantity}`;
+        const btnRemove = document.createElement('button');
+        btnRemove.textContent = 'Remove';
+        btnRemove.addEventListener('click', () => {
+            removeFromCart(item);
+        });
+        li.appendChild(btnRemove);
+        cartList.appendChild(li);
+
+        total += item.price * item.quantity;
+    });
+
+    // Update total price
+    document.getElementById('total-price').textContent = total.toFixed(2);
+}
+
+// Remove item from cart
+function removeFromCart(item) {
+    const index = cartItems.findIndex(cartItem => cartItem.name === item.name);
+    if (index !== -1) {
+        cartItems[index].quantity--;
+        if (cartItems[index].quantity === 0) {
+            cartItems.splice(index, 1);
+        }
+    }
+
+    // Update cart UI
+    updateCartUI();
+}
+
+// Purchase button click event
+document.getElementById('purchase-btn').addEventListener('click', () => {
+    // Perform purchase logic here
+    // You can access the purchased items and their quantities from cartItems array
+    // You can calculate the total price from cartItems array as well
+    // For demo purposes, let's just log the purchased items and total price
+    console.log('Purchased Items:', cartItems);
+    console.log('Total Price:', document.getElementById('total-price').textContent);
+});
+
+
+    </script>
+</body>
+</html>

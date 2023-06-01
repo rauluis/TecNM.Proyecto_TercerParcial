@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TecNM.Proyecto.WebSite.props" />
+</Project>

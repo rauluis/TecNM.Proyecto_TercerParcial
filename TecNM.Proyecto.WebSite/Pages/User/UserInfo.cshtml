@@ -1,0 +1,86 @@
+﻿@page "{id:int?}"
+@model TecNM.Proyecto.WebSite.Pages.User.UserInfo
+
+
+<div class="hero-bread" style="position: relative;">
+    <img alt="" src="~/img/images/bg_6.jpg" style="width: 100%; max-height: 400px; object-fit: cover;">
+    <div class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-0 bread" style="font-weight: 800;,color: #000000;,font-size: 30px;,font-family:Open Sans;,Arial, sans-serif;,letter-spacing: 3px;,text-transform: uppercase;">Perfil de Usuario</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section contact-section bg-light">
+    <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-4">
+                    <div class="profile-image">
+                        <img src="~/img/user.png" alt="Foto de perfil" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <form method="post">
+                                    <input type="hidden" asp-for="User.Id"/>
+                                    <div class="form-group">
+                                        <label asp-for="User.Name"></label>
+                                        <input asp-for="User.Name" class="form-control" maxlength="45" readonly/>
+                                        <span class="text-danger" asp-validation-for="User.Name"></span>
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <label asp-for="User.Address"></label>
+                                        <input asp-for="User.Address" class="form-control" maxlength="100" readonly/>
+                                        <span class="text-danger" asp-validation-for="User.Address"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="User.Phone"></label>
+                                        <input asp-for="User.Phone" class="form-control" maxlength="100" readonly/>
+                                        <span class="text-danger" asp-validation-for="User.Phone"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="User.Username"></label>
+                                        <input asp-for="User.Username" class="form-control" maxlength="100" readonly/>
+                                        <span class="text-danger" asp-validation-for="User.Username"></span>
+                                    </div>
+                    
+                                    @if (Model.Errors.Count > 0)
+                                    {
+                                        <div class="alert alert-danger" role="alert">
+                                            <ul>
+                                                @foreach (var error in Model.Errors)
+                                                {
+                                                    <li>Ocurrio un error</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                    <div class="col-md-12">
+                                        <div class="mb-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-12 text-right">
+                                            <button type="button" class="btn btn-primary mr-3" onclick="enableFields()">Modificar</button>
+                                            <button type="submit" class="btn btn-primary mr-3" id="guardarBtn" style="display: none">Guardar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                    
+                </div>
+            </div>
+        </div>
+</section>
+
+<script>
+    function enableFields() {
+        var inputs = document.querySelectorAll('input[readonly]');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].removeAttribute('readonly');
+        }
+                document.getElementById('guardarBtn').style.display = 'inline-block';
+        document.getElementById('guardarBtn').classList.remove('hidden');
+    }
+</script>

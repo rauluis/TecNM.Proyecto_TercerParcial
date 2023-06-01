@@ -1,0 +1,141 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TecNM.Proyecto.WebSite
+build_property.RootNamespace = TecNM.Proyecto.WebSite
+build_property.ProjectDir = C:\Users\User\Downloads\proyectos\web\TecNM.Proyecto\TecNM.Proyecto\TecNM.Proyecto.WebSite\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\User\Downloads\proyectos\web\TecNM.Proyecto\TecNM.Proyecto\TecNM.Proyecto.WebSite
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Catalog/SingleProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ1xTaW5nbGVQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Catalog/store.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ1xzdG9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Order1/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIxXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Order1/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIxXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Order1/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIxXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/OrderDetails/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/OrderDetails/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/OrderDetails/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWxzXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/ProductCategory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3J5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/ProductCategory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/ProductCategory/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3J5XExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Product/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/User/UserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxVc2VySW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Downloads/proyectos/web/TecNM.Proyecto/TecNM.Proyecto/TecNM.Proyecto.WebSite/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rcgrcz38j1

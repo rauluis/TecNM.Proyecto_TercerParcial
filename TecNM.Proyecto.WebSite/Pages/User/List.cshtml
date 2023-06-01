@@ -1,0 +1,56 @@
+﻿@page
+@model TecNM.Proyecto.WebSite.Pages.User.ListModel
+
+<div class="container" style="margin-bottom: 200px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <form method="get">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <br/>
+                <a asp-page=".\Edit" class="btn btn-success">Agregar nuevo</a>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>UserName</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th></th>
+                </tr>
+                @foreach (var User in @Model.User)
+                {
+                    <tr>
+                        <td>@User.Name</td>
+                        <td>@User.Username</td>
+                        <td>@User.Address</td>
+                        <td>@User.Phone</td>
+                        <td>
+                            <a a-asp-area="" asp-page="/User/Edit" asp-route-id="@User.Id"
+                               class="btn btn-primary" role="button">Editar</a>
+                            <a a-asp-area="" asp-page="/User/Delete" asp-route-id="@User.Id"
+                               class="btn btn-danger mr-3" role="button">Borrar</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>

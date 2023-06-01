@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cafetería Escolar</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <style>
+    /* Estilos de la cuadrícula de productos */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .product-item {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Estilos de los pies de página */
+footer {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item h3 {
+  margin-top: 0;
+}
+
+.product-item p {
+  color: #888888;
+}
+
+.add-to-cart button {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.cart-container {
+  width: 30%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cart-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.cart-item h4 {
+  margin: 0;
+}
+
+.cart-item p {
+  margin: 0;
+  color: #888888;
+}
+
+.cart-total {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-total h4 {
+  margin: 0;
+}
+
+.cart-total button {
+  font-size: 16px;
+}
+
+section {
+  width: 70%;
+  margin: 0 auto;
+  float: left;
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cart-container {
+    width: 100%;
+    position: static;
+  }
+}
+header{
+  width: 70%;
+  margin: 0 auto;
+  float: left;
+}
+li {
+    list-style: none;
+  }
+
+  .menu-list,
+        .cart-list,
+        .modal-cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-list li,
+        .cart-list li,
+        .modal-cart-items li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .menu-list img,
+        .cart-list img,
+        .modal-cart-items img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+  </style>
+</head>
+
+<body>
+  <header class="bg-primary text-white p-5">
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link text-white" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#comidas">Comidas</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#bebidas">Bebidas</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#otros-productos">Otros Productos</a></li>
+      </ul>
+    </nav>
+    <h1 class="display-4">Cafetería Escolar</h1>
+    <p class="lead">Servicio de alimentos y bebidas para estudiantes</p>
+  </header>
+
+  <section id="comidas" class="bg-light py-5" >
+    <div class="container" >
+      <h2 class="text-center mb-4">Comidas</h2>
+      <div class="product-grid" id="menu-list" >
+
+
+        <div class="product-item">
+          <img src="img/churro.jpg" alt="Comida 1" class="img-fluid">
+          <h3 class="text-center">Comida 1</h3>
+          <p>Descripción de la Comida 1</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <section id="bebidas" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Bebidas
+
+      </h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="img/refresc.jpg" alt="Bebida 1" class="img-fluid">
+          <h3 class="text-center">Bebida 1</h3>
+          <p>Descripción de la Bebida 1</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img src="img/refresc.jpg" alt="Bebida 2" class="img-fluid">
+          <h3 class="text-center">Bebida 2</h3>
+          <p>Descripción de la Bebida 2</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="img/refresc.jpg" alt="Bebida 2" class="img-fluid">
+          <h3 class="text-center">Bebida 2</h3>
+          <p>Descripción de la Bebida 2</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+        </div>
+
+        <!-- Agrega más productos de bebidas según sea necesario -->
+      </div>
+    </div>
+  </section>
+
+  <section id="otros-productos" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Otros Productos</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="img/fruta.jpg" alt="Producto 1" class="img-fluid">
+          <h3 class="text-center">Producto 1</h3>
+          <p>Descripción del Producto 1</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="img/fruta.jpg" alt="Producto 2" class="img-fluid">
+          <h3 class="text-center">Producto 2</h3>
+          <p>Descripción del Producto 2</p>
+          <div class="add-to-cart">
+            <button class="btn btn-primary btn-sm" >+</button><button class="btn btn-primary btn-sm" >-</button>
+          </div>
+
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+      </div>
+    </div>
+  </section> 
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9"></div>
+      <div class="col-md-3">
+        <div class="cart-container">
+          <h3>Carrito de Compras</h3>
+          <ul class="cart-items" id="cart-list" style="overflow-y: scroll; max-height: 75%;">
+            <!-- Aquí se muestran los elementos del carrito de compras -->
+            
+            <!-- Aquí se muestran más elementos del carrito de compras -->
+          </ul>
+          <div class="cart-total">
+            <p>Total: <span id="cart-total">0.00</span></p>
+            <button class="btn btn-primary" id="cart-pay">Pagar</button>
+          </div>
+          <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="modal-cart-items" class="cart-items">
+                    <!-- Los elementos del carrito de compras se generan dinámicamente en JavaScript -->
+                </ul>
+                <div class="modal-cart-total">
+                    <h4>Total: $<span id="modal-cart-total">0.00</span></h4>
+                    <button class="btn btn-primary" id="modal-cart-pay">Pagar</button>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        
+
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    const menuItems = [
+     { id: 1, name: "Producto 1", price: 1.00, image: "img/churro.jpg" },
+     { id: 2, name: "Producto 2", price: 10.00, image: "img/churro.jpg" }, 
+     { id: 3, name: "Producto 3", price: 100.00, image: "img/churro.jpg" },
+     { id: 4, name: "Producto 4", price: 1000.00, image: "img/churro.jpg" }, 
+
+    ];
+
+    // Variables para llevar el seguimiento de los elementos del carrito
+    let cartItems = [];
+    let cartTotal = 0;
+
+    // Función para mostrar los elementos del menú en la página
+    function renderMenu() {
+        const menuList = document.getElementById("menu-list");
+        menuList.innerHTML = "";
+        menuItems.forEach(item => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+            <div class="product-item">
+         <img src="${item.image}" alt="${item.name}" class="img-fluid">
+        <h3 class="text-center">${item.name}</h3>
+        <p>$${item.price.toFixed(2)}</p>
+        <div class="add-to-cart">
+        <button class="btn btn-primary btn-sm" onclick="addToCart(${item.id})">+</button>
+      </div>
+    </div>
+    `;
+            menuList.appendChild(li);
+        });
+    }
+
+    // Función para agregar un elemento al carrito
+    function addToCart(itemId) {
+const item = menuItems.find(item => item.id === itemId);
+if (item) {
+    const existingCartItem = cartItems.find(cartItem => cartItem.id === itemId);
+    if (existingCartItem) {
+        // Si el elemento ya existe en el carrito, incrementa el contador
+        existingCartItem.quantity++;
+    } else {
+        // Si el elemento no existe en el carrito, agrégalo con un contador de 1
+        item.quantity = 1;
+        cartItems.push(item);
+    }
+    cartTotal += item.price;
+    updateCart();
+}
+}
+
+
+// Función para actualizar los elementos del carrito en la página
+function updateCart() {
+const cartList = document.getElementById("cart-list");
+const cartTotalElement = document.getElementById("cart-total");
+cartList.innerHTML = "";
+cartItems.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+              <div class="item-details">
+                <h4>${item.name}</h4>
+                <p>Precio: $${(item.price * item.quantity).toFixed(2)}</p>
+                <p>Cantidad: ${item.quantity}</p>
+              </div>
+              <button class="btn btn-danger btn-sm"onclick="removeFromCart(${item.id})">-</button>
+            
+    `;
+    // li.className = "cart-item";
+    cartList.appendChild(li);
+});
+cartTotalElement.textContent = cartTotal.toFixed(2);
+}
+
+
+    // Función para quitar un elemento del carrito
+    function removeFromCart(itemId) {
+        const itemIndex = cartItems.findIndex(item => item.id === itemId);
+        if (itemIndex !== -1) {
+            cartTotal -= cartItems[itemIndex].price;
+            cartItems.splice(itemIndex, 1);
+            updateCart();
+        }
+    }
+
+    // Función para procesar el pago
+    function processPayment() {
+        // Lógica para procesar el pago (puede ser una API, un formulario, etc.)
+        // Aquí se puede agregar la lógica adicional necesaria para el pago
+
+        // Mostrar modal de carrito vacío
+        showModalCartEmpty();
+    }
+
+    // Función para mostrar el modal con el carrito vacío
+    function showModalCartEmpty() {
+        const modal = document.getElementById("modal");
+        const modalCartItems = document.getElementById("modal-cart-items");
+        const modalCartTotalElement = document.getElementById("modal-cart-total");
+        modalCartItems.innerHTML = "";
+        modalCartTotalElement.textContent = "0.00";
+        modal.style.display = "block";
+        cartItems = [];
+        cartTotal = 0;
+        updateCart();
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+    // Función para reiniciar el carrito
+    function resetCart() {
+        cartItems = [];
+        cartTotal = 0;
+        updateCart();
+    }
+
+    // Llamar a la función para mostrar el menú inicial al cargar la página
+    window.onload = function () {
+        renderMenu();
+    }
+
+
+</script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
+</body>
+
+</html>

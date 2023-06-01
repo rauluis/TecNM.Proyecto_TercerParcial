@@ -1,0 +1,71 @@
+﻿@page
+@model TecNM.Proyecto.WebSite.Pages.Order1.ListModel
+
+<div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <form method="get">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4">
+                <br/>
+                <a asp-page=".\Edit" class="btn btn-success">Agregar nuevo</a>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table">
+                <tr>
+                    <th>Ammount</th>
+                    <th>Available</th>
+                    <th>idUser</th>
+                    <th></th>
+                </tr>
+                @foreach (var Order1 in @Model.Order1)
+                {
+                    <tr>
+                        <td>@Order1.Ammount</td>
+                        <td>@Order1.Available</td>
+                        <td>@Order1.idUser</td>
+                        <td>
+                            <a a-asp-area="" asp-page="/Order1/Edit" asp-route-id="@Order1.Id"
+                               class="btn btn-primary" role="button">
+                                Editar
+                            </a>
+                            <a a-asp-area="" asp-page="/Order1/Delete" asp-route-id="@Order1.Id"
+                               class="btn btn-danger mr-3" role="button">
+                                Borrar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 100px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@page
+@model TecNM.Proyecto.WebSite.Pages.User.Login
+
+@{ 
+    var successMessage = TempData["SuccessMessage"] as string;
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+
+
+<link rel="stylesheet" href="~/css/style2.css">
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="formulario  p-4 rounded bg-black">
+         
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-info text-center">@TempData["Message"]</div>
+        }
+        <h1 class="text-center text-primary">Iniciar sesión</h1>
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="alert alert-success">@successMessage</div>
+        }
+        
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger">@errorMessage</div>
+
+        }
+        <form method="post">
+            <div class="form-group">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" class="form-control" id="username" name="username" required asp-validation-for="User.username">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" class="form-control" required asp-validation-for="User.username">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+        </form>
+        <p class="text-center mt-3">¿No tienes una cuenta?</p>
+        <p><a asp-page="/User/Register">Regístrate aquí</a></p>
+    </div>
+</div>

@@ -1,0 +1,234 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.navbar-nav a.nav-link {
+  color: white;
+}
+
+
+/* Estilo para el encabezado */
+#header {
+  background-color: #007BFF; /* Cambio a azul */
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Estilo para el título del encabezado */
+#header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* Estilo para el subtítulo del encabezado */
+#header p {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+/* Estilo para la animación del botón de inicio */
+#header .btn {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #007BFF; /* Cambio a azul */
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para el botón de inicio al pasar el cursor */
+#header .btn:hover {
+  background-color: #007BFF; /* Cambio a azul */
+  color: #fff;
+  transform: scale(1.05);
+  border: 1px solid #fff; /* borde delgado */
+}
+
+/* Estilo para el menú de la cafetería */
+#menu {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Estilo para los íconos del menú */
+#menu .icon {
+  font-size: 48px;
+  color: #007BFF; /* Cambio a azul */
+  margin-bottom: 20px;
+}
+
+/* Estilo para los títulos del menú */
+#menu h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los detalles del menú */
+#menu p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Estilo para el pie de página */
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+/* Estilo para el texto del pie de página */
+#footer p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Estilos para la animación de las imágenes del menú */
+.menu-img {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  max-width: 300px; /* Ancho máximo de 300px */
+  max-height: 200px; /* Altura máxima de 200px */
+  width: auto; /* Ancho automático para mantener la proporción de la imagen */
+  height: auto; /* Altura automática para mantener la proporción de la imagen */
+}
+
+
+/* Navigation Bar */
+nav {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url(img/start1.jpg) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: .8;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+
+
+.cta-button {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #000;
+}
+
+
+/* Estilos para la sección de sobre nosotros */
+#about {
+  padding: 80px 0;
+}
+
+#about .container {
+  max-width: 1170px;
+}
+
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+#about p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #777;
+}
+
+#about .about-img {
+  margin-top: 20px;
+  max-width: 100%;
+}
+#home.hero h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#home.hero p {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+}

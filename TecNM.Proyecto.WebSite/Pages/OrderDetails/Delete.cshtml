@@ -1,0 +1,79 @@
+﻿@page "{id:int}"
+@model TecNM.Proyecto.WebSite.Pages.OrderDetails.Delete
+
+<div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Borrar Detalle Pedido</h2>
+
+            <form method="post">
+                <input type="hidden" asp-for="OrderDetails.Id"/>
+                <div class="form-group">
+                    <label asp-for="OrderDetails.idProduct"></label>
+                    <input asp-for="OrderDetails.idProduct" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="OrderDetails.idProduct"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="OrderDetails.idOrder"></label>
+                    <input asp-for="OrderDetails.idOrder" class="form-control" maxlength="100"/>
+                    <span class="text-danger" asp-validation-for="OrderDetails.idOrder"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OrderDetails.Quantity"></label>
+                    <input asp-for="OrderDetails.Quantity" class="form-control" maxlength="100"/>
+                    <span class="text-danger" asp-validation-for="OrderDetails.Quantity"></span>
+                </div>
+                <div class="col-md-1"></div>
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>Ocurrio un error</li>
+                            }
+                        </ul>
+                    </div>    
+                }
+                <div class="col-md-12">
+                    <div class="mb-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-danger mr-3">Borrar</button>
+                        <a class="btn btn-secondary" asp-page="/OrderDetails/List">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<div class="container" style="margin-bottom: 100px;">
+    <div class="row">
+        <div class="col-md-10 mt-10">
+            <!-- Contenido del primer div -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 mb-10">
+            <!-- Contenido del segundo div -->
+        </div>
+    </div>
+</div>
